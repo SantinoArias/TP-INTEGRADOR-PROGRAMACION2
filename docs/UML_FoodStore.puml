@@ -1,0 +1,80 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+abstract class Base {
+  - id: Long
+  - eliminado: boolean
+  - createdAt: LocalDateTime
+  + eliminar(): void
+  + isActivo(): boolean
+}
+
+interface Calculable {
+  + calcularTotal(): void
+}
+
+class Categoria {
+  - nombre: String
+  - descripcion: String
+  - productos: List<Producto>
+}
+
+class Producto {
+  - nombre: String
+  - precio: Double
+  - descripcion: String
+  - stock: Integer
+  - imagen: String
+  - disponible: Boolean
+}
+
+class Usuario {
+  - nombre: String
+  - apellido: String
+  - mail: String
+  - celular: String
+  - contrasena: String
+  - rol: Rol
+}
+
+class Pedido {
+  - fecha: LocalDate
+  - estado: Estado
+  - total: Double
+  - formaPago: FormaPago
+  + addDetallePedido(cantidad, subtotal, producto): void
+  + findeDetallePedidoByProducto(producto): DetallePedido
+  + deleteDetallePedidoByProducto(producto): void
+  + calcularTotal(): void
+}
+
+class DetallePedido {
+  - cantidad: Integer
+  - subtotal: Double
+}
+
+class ComprobantePedido {
+  - codigo: String
+  - fechaEmision: LocalDateTime
+  - importe: Double
+}
+
+enum Rol { ADMIN; USUARIO }
+enum Estado { PENDIENTE; CONFIRMADO; TERMINADO; CANCELADO }
+enum FormaPago { TARJETA; TRANSFERENCIA; EFECTIVO }
+
+Base <|-- Categoria
+Base <|-- Producto
+Base <|-- Usuario
+Base <|-- Pedido
+Base <|-- DetallePedido
+Base <|-- ComprobantePedido
+Pedido ..|> Calculable
+Categoria "1" o-- "0..*" Producto
+Producto "0..*" --> "1" Categoria
+Usuario "1" --> "0..*" Pedido
+Pedido "1" *-- "1..*" DetallePedido
+DetallePedido "0..*" --> "1" Producto
+Pedido "1" *-- "1" ComprobantePedido
+ComprobantePedido "1" --> "1" Pedido
+@enduml
