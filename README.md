@@ -251,8 +251,6 @@ LINK_VIDEO_PUBLICO: pendiente
 LINK_REPOSITORIO_PUBLICO: pendiente
 ```
 
-El repositorio debe estar público y el video debe tener permisos públicos de visualización.
-
 ---
 
 ## 👥 Participación de los integrantes
@@ -261,4 +259,3 @@ El repositorio debe estar público y el video debe tener permisos públicos de v
 |-------------------|----------------------------------------------------------------|------------:|
 | **Santino Arias** | Desarrollo, pruebas, documentación, repositorio y video         | **100%**    |
 
-> Declaración: esta tabla refleja la participación real en la entrega actual.
