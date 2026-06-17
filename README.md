@@ -10,7 +10,7 @@
 [![Maven](https://img.shields.io/badge/Maven-Proyecto-ef4444?logo=apachemaven&logoColor=white)]()
 [![NetBeans](https://img.shields.io/badge/IDE-NetBeans-1B6AC6?logo=apachenetbeanside&logoColor=white)]()
 [![CLI](https://img.shields.io/badge/Interface-Consola-222)]()
-[![Status](https://img.shields.io/badge/Estado-Listo%20para%20probar-22c55e)]()
+[![Status](https://img.shields.io/badge/Estado-Finalizado-22c55e)]()
 
 </div>
 
@@ -36,6 +36,8 @@ Aplicación de **consola** desarrollada en **Java 21** para administrar un negoc
 El sistema permite gestionar **categorías**, **productos**, **usuarios** y **pedidos**, aplicando los contenidos trabajados en Programación 2: **Programación Orientada a Objetos**, herencia, encapsulamiento, interfaces, colecciones en memoria, excepciones propias, validaciones y separación por capas.
 
 La información se mantiene durante la ejecución del programa mediante **ArrayList**, sin utilizar base de datos. Todas las bajas se realizan de forma lógica usando el atributo `eliminado`, para no perder el historial de los datos cargados.
+
+> **Estado del proyecto:** finalizado, probado en NetBeans y subido a repositorio público.
 
 ---
 
@@ -215,8 +217,7 @@ FoodStoreTPI/
 ├─ README.md
 ├─ docs/
 │  ├─ Informe_TPI_FoodStore.pdf
-│  ├─ UML_FoodStore.puml
-│  └─ Guion_Video_BASE.txt
+│  └─ UML_FoodStore.puml
 └─ src/
    └─ main/
       └─ java/
@@ -241,14 +242,15 @@ El proyecto incluye documentación técnica dentro de la carpeta `docs`:
 ```text
 docs/Informe_TPI_FoodStore.pdf
 docs/UML_FoodStore.puml
-docs/Guion_Video_BASE.txt
 ```
 
-Antes de la entrega final, completar en este README:
+Estado de entrega:
 
 ```text
-LINK_VIDEO_PUBLICO: pendiente
-LINK_REPOSITORIO_PUBLICO: pendiente
+Proyecto: finalizado
+Repositorio público: https://github.com/SantinoArias/TP-INTEGRADOR-PROGRAMACION2
+Documentación PDF: docs/Informe_TPI_FoodStore.pdf
+Video demostrativo: https://1drv.ms/v/c/2f4b49061f7e83c1/IQASsVum1FJpQ6akxF_oSB2wAXA5CX_c8ihvRFyLVeE42yo?e=CvbUpi
 ```
 
 ---
